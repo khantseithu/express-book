@@ -102,6 +102,41 @@ app.patch('/api/v1/books/:id', (req, res) => {
   });
 });
 
+//delete book
+app.delete('/api/v1/books/:id', (req, res) => {
+  const id = req.params.id * 1;
+
+  const bookIndex = bookData.findIndex((el) => el.id === id);
+
+  if (bookIndex === -1) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid ID',
+    });
+  }
+
+  // remove book
+  bookData.splice(bookIndex, 1);
+
+  fs.writeFile(
+    `${__dirname}/dev-data/books.json`,
+    JSON.stringify(bookData),
+    (err) => {
+      if (err) {
+        return res.status(500).json({
+          status: 'fail',
+          message: 'Error deleting book',
+        });
+      }
+
+      res.status(204).json({
+        status: 'success',
+        data: null,
+      });
+    }
+  );
+});
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
