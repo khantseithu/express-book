@@ -14,3 +14,5 @@ bookRouter
   .get(bookController.getSingleBook)
   .patch(bookController.updateBook)
   .delete(bookController.deleteBook);
+
+module.exports = bookRouter;

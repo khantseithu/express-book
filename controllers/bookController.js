@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const bookData = JSON.parse(
-  fs.readFileSync(`${__dirname}/dev-data/books.json`)
+  fs.readFileSync(`${__dirname}/../dev-data/books.json`)
 );
 
 exports.checkBody = (req, res, next) => {
