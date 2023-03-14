@@ -1,5 +1,32 @@
 [
   {
+    "id": 1,
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "genre": "Science Fiction",
+    "price": 7.99,
+    "publishedDate": "1979-10-12",
+    "description": "Seconds before Earth is demolished to make way for a galactic freeway, Arthur Dent is plucked off the planet by his friend Ford Prefect, a researcher for the revised edition of The Hitchhiker's Guide to the Galaxy who, for the last fifteen years, has been posing as an out-of-work actor."
+  },
+  {
+    "id": 2,
+    "title": "The Restaurant at the End of the Universe",
+    "author": "Douglas Adams",
+    "genre": "Science Fiction",
+    "price": 6.99,
+    "publishedDate": "1980-10-12",
+    "description": "The Restaurant at the End of the Universe is a science fiction comedy novel by Douglas Adams, the second in the Hitchhiker's Guide to the Galaxy series. It was first published in the United Kingdom on 12 October 1980 by Pan Books, and in the United States on 1 November 1980 by Del Rey Books."
+  },
+  {
+    "id": 3,
+    "title": "Life, the Universe and Everything",
+    "author": "Douglas Adams",
+    "genre": "Science Fiction",
+    "price": 6.99,
+    "publishedDate": "1982-10-12",
+    "description": "Life, the Universe and Everything is a science fiction comedy novel by Douglas Adams, originally broadcast by BBC Radio 4 in 1988 and published in 1982. It is the third of five books in The Hitchhiker's Guide to the Galaxy series. The novel is set five million years after the events of The Restaurant at the End of the Universe, and follows the adventures of Arthur Dent and Ford Prefect as they attempt to prevent the destruction of the Earth."
+  },
+  {
     "id": 4,
     "title": "The Hobbit",
     "author": "J. R. R. Tolkien",
