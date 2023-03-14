@@ -4,10 +4,7 @@ const app = express();
 
 const bookRoute = require('./routes/bookRoutes');
 
-// Middleware
 app.use(express.json());
-
-//controllers
 
 app.use('/api/v1/books', bookRoute);
 
