@@ -10,6 +10,16 @@ const bookData = JSON.parse(
 // Middleware
 app.use(express.json());
 
+function checkBody(req, res, next) {
+  if (!req.body.title || !req.body.author) {
+    return res.status(400).json({
+      status: 'fail',
+      message: 'Missing required fields: title, author',
+    });
+  }
+  next();
+}
+
 //return all books
 app.get('/api/v1/books', (req, res) => {
   //   res.send("Hello World!");
@@ -43,12 +53,13 @@ app.get('/api/v1/books/:id', (req, res) => {
 });
 
 //create new book
-app.post('/api/v1/books', (req, res) => {
+app.post('/api/v1/books/:id', checkBody, (req, res) => {
   // const newId = bookData[bookData.length - 1].id + 1;
   console.log(req.body);
   const newId = Math.max(...bookData.map((el) => el.id)) + 1;
   const newBook = Object.assign({ id: newId }, req.body);
   console.log(newBook);
+
   bookData.push(newBook);
 
   fs.writeFile(
